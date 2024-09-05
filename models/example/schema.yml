@@ -1,0 +1,40 @@
+
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Sales data"
+    columns:
+      # - name: reference_id
+      #   description: "Transaction ID"
+      #   data_tests:
+      #     - not_null
+      
+      - name: product_name
+        description: "The name of the product sold."
+        tests:
+          - not_null
+
+      - name: sales_agent_name
+        description: "The name of the sales agent involved."
+        tests:
+          - not_null
+
+      - name: country
+        description: "The country where the sale took place."
+        tests:
+          - not_null
+
+      - name: campaign_name
+        description: "The name of campaign"
+        tests:
+          - not_null
+      
+      - name: source
+        description: "The source of the sale."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Chat', 'Call', 'From Support', 'Ticket', 'N/A']
+
+
