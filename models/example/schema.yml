@@ -5,10 +5,10 @@ models:
   - name: fact_sales
     description: "Sales data"
     columns:
-      # - name: reference_id
-      #   description: "Transaction ID"
-      #   data_tests:
-      #     - not_null
+      - name: reference_id
+        description: "Transaction ID"
+        data_tests:
+          - not_null
       
       - name: product_name
         description: "The name of the product sold."
